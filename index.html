@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_work #3</title>
+    <script type="text/javascript">
+        function equal(a, b) {
+            return (a != b) ? "Числа не равны" : "Числа равны";
+        }
+
+        function displayMax() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = equal(num1, num2);
+            document.getElementById('result').innerText = 'Результат: ' + result;
+        }
+    </script>
+</head>
+<body>
+    <div class="Resume">
+        <p calss="Resume">
+            <b>Резюме</b>
+        </p>
+    </div>
+    <div class="Image">
+        <img src="https://media.discordapp.net/attachments/1108535194681626634/1245432995154890843/32565634252.jpg?ex=6658bb5d&is=665769dd&hm=3a61a629911381575bd80082c535640f140ea4aa1bd3a9b0752d8218e9c0c61a&=&format=webp&width=525&height=525" align="left" alt="Картинка для резюме" class="Avatar">
+    </div>
+    <div class="Name">
+        <p class="Name">
+            <p>Хохлов Дмитрий Сергеевич</p>
+            <p>Возраст: 21</p>
+            <p>Образовательное учреждение: ФБГОУ ВО МГТУ "СТАНКИН"</p>
+            <p>Курс: 3</p>
+            <p>Навыки:</p>
+            <p>C++, Python, HTML, CSS, JavaScript</p>
+        </p>
+    </div>
+    <br>
+    <br>
+    <input type="text" id="nameInput" placeholder="Введите ваше имя">
+
+    <button onclick="showMessage()">Принять</button>
+
+    <script>
+        function showMessage() {
+            var name = document.getElementById('nameInput').value;
+            alert('Подтвердите, что ваш зовут ' + name + '!');
+        }
+    </script>
+    <div class="Numbers">
+        <h2>Введите два числа для сравнения</h2>
+        <label for="num1">Число 1:</label>
+        <input type="number" id="num1" name="num1">
+        <br>
+        <label for="num2">Число 2:</label>
+        <input type="number" id="num2" name="num2">
+        <br><br>
+        <button onclick="displayMax()">Сравнить</button>
+        <br><br>
+        <div id="result"></div>
+    </div>
+
+</body>
+<style>
+    body {
+        font-family: Arial;
+        text-align: center;
+        background:	#C6E2FF;
+    }
+    .Resume {
+        background-color: #8B4C39;
+        font-size: 30px;
+        color: #C6E2FF;
+        width: 400px;
+        height: 90px;
+        padding: 2px 2px;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px #607B8B;
+        margin: 0 auto;
+    }
+    .Name {
+        padding: 5px;
+        text-align: left;
+        font-size: 20px;
+        color: #8B4C39;
+        font-weight: bolder;
+    }
+    .Image img.Avatar {
+        width: 300px;
+        height: 300px;
+        border: 8px solid #C6E2FF;
+    }
+    .Numbers {
+        color: #8B4C39;
+        text-align: left;
+    }
+    input[type="text"] {
+           padding: 10px;
+           margin: 15px;
+           width: 200px;
+       }
+       button {
+           padding: 10px 20px;
+           background-color: #4CAF50;
+           color: #C6E2FF;
+           border: none;
+           cursor: pointer;
+       }
+       button:hover {
+           background-color: #45a049;
+       }
+</style>
+</html>
